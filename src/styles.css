@@ -1,0 +1,138 @@
+/* Stijlen voor een formulier met invulbare velden recht boven elkaar */
+.form-container {
+  max-width: 700px; /* Beperkt de breedte van de container */
+  max-height: 470px;
+  margin: 0 auto; /* Centreer de container */
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  font-family: sans-serif;
+  color: #6D758F;
+}
+
+.form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.label-inline {
+  display: inline-block;
+  width: calc(50% - 10px); /* Verdeling van de breedte */
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.label-inline:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block; /* Zorgt ervoor dat labels boven de invulvelden staan */
+  margin-bottom: 8px; /* Ruimte tussen label en veld */
+  font-weight: bold; /* Optioneel: maak het label vetgedrukt */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Houd padding binnen de breedte */
+}
+
+textarea {
+  resize: none;
+}
+
+.button {
+  display: block;
+  width: 130px;
+  height: 44px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  background-color: #c0ac71;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #918256;
+}
+.phone {
+  max-width: 275px;
+}
+.privacypolicy {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.privacypolicy:hover {
+  text-decoration: underline;
+}
+
+/* Specifieke layout-aanpassing voor naam en e-mail */
+.inline-group {
+  display: flex;
+  gap: 16px; /* Ruimte tussen de velden */
+}
+
+.inline-group .form-group {
+  flex: 1; /* Beide velden krijgen evenveel ruimte */
+}
+
+.data-container table {
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.data-container table th,
+.data-container table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.data-container table th {
+  background-color: #f4f4f4;
+}
+
+h2 {
+  padding: 15px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.name {
+  max-width: 235px;
+}
+
+.email {
+  max-width: 235px;
+  padding-left: 50px;
+}
+
+.message {
+  max-width: 505px;
+  max-height: 100px;
+}
+
+.form-content {
+  padding: 30px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactformulier</title>
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Contactformulier</h1>
+    <form action="submit.php" method="POST">
+        <div class="form-group">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" placeholder="Je naam" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Je e-mailadres" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefoonnummer:</label>
+            <input type="phone" id="phone" name="phone" placeholder="+31 6 12345678" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Bericht:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Schrijf hier je bericht" required></textarea>
+        </div>
+        <div class="form-group">
+            <a class="privacypolicy" href="">Privacybeleid</a>
+        </div>
+        <button type="submit">Verzenden</button>
+    </form>
+</div>
+</body>
+</html>
