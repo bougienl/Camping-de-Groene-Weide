@@ -43,7 +43,7 @@ textarea {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #e4e4e4;
   border-radius: 4px;
   box-sizing: border-box; /* Houd padding binnen de breedte */
 }
@@ -95,7 +95,7 @@ textarea {
   flex: 1; /* Beide velden krijgen evenveel ruimte */
 }
 
-.data-container table {
+/* .data-container table {
   max-width: 1200px;
   border-collapse: collapse;
   margin: 0 auto;
@@ -135,4 +135,4 @@ h2 {
 
 .form-content {
   padding: 30px;
-}
+} */
