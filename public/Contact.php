@@ -1,3 +1,11 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping "de Groene Weide"</title>
+    <link rel="stylesheet" href="../src/styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+</head>
+
 <?php
 require '../config/db.php';
 
@@ -14,18 +22,52 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="nl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactformulier</title>
-    <link rel="stylesheet" href="../src/styles.css">
-</head>
-
 <body>
 
+<nav>
+    <div class="navbar-rechts">
+        <ul>
+            <a href="../public/index.html">
+                <img src="../assets/image.png" width="80">
+            </a>
+
+            <a href="../public/overons.html">
+                <li> Over ons</li>
+            </a>
+
+            <a href="../public/contact.php" target="_blank">
+                <li> Contact </li>
+            </a>
+        
+            <a href="../public/opdekaart.html">
+                <li>Op de Kaart</li>
+            </a>
+
+            <div class="reserverenknop">
+                    <a href="#">
+                        <li>Reserveren</li>
+                    </a>
+            </div>
+        </ul>
+    </div>
+</nav>
+<div class="filling"></div>
+<div class="gridcontainer">
+    <div class="header1">
+        <h1>Neem contact op met ons</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+    <div></div>
+    <div class="brownie">
+        <div class="adress">
+            <h1>Boerencamping<br>
+                "De Groene Weide"</h1>
+                <p><object data="../assets/phone.svg" style="margin-bottom: 0.25rem;"></object>+31 592 8492829<br>
+                <object data="../assets/pin-1.svg" style="margin-bottom: -0.5rem;"></object>Balloo 26 9458TA,Balloo, Drenthe<br>
+                <object data="../assets/mail.svg" style="margin-bottom: -0.75rem;"></object>Bertdebeste@gmail.com</p>
+        </div>
+    </div>
+</div>
 <div class="form-container">
     <form action="submit.php" method="POST">
         <div class="form-content">
@@ -60,47 +102,15 @@ $conn->close();
         </div>
     </form>
 </div>
-
-    
-<div class="data-container">
-    <h2>Berichten uit de database</h2>
-    <?php if (!empty($messages)): ?>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Naam</th>
-                    <th>E-mail</th>
-                    <th>Telefoonnummer</th>
-                    <th>Bericht</th>
-                    <th>Ingediend op</th>
-                    <th>Afboeken</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($messages as $message): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($message['id']); ?></td>
-                        <td><?= htmlspecialchars($message['name']); ?></td>
-                        <td><?= htmlspecialchars($message['email']); ?></td>                        
-                        <td><?= htmlspecialchars($message['phone']); ?></td>
-                        <td><?= nl2br(htmlspecialchars($message['message'])); ?></td>
-                        <td><?= htmlspecialchars($message['submitted_at']); ?></td>
-                        <td>
-                        <form action="delete.php" method="POST">
-                            <input class="delete" type='submit' value="Delete">
-                            <input hidden name="id" value="<?= htmlspecialchars($message['id']); ?>">
-                        </form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php else: ?>
-        <p>Er zijn nog geen berichten om weer te geven.</p>
-    <?php endif; ?>
+<div class="route">
+    <h1>
+        Route
+    </h1>
+    <p style="color: #8DB411">Met de auto</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+    <p style="color: #8DB411">Met de trein/bus</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
 </div>
 
-</body>
-
-</html>

@@ -1,27 +1,4 @@
-<div class="form-container">
-    <h1>Contactformulier</h1>
-    <!-- Formulier voor nieuwe berichten -->
-    <form action="submit.php" method="POST">
-        <div class="form-group">
-            <label for="name">Naam:</label>
-            <input type="text" id="name" name="name" placeholder="Je naam" required>
-        </div>
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Je e-mailadres" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Telefoonnummer:</label>
-            <input type="phone" id="phone" name="phone" placeholder="+31 6 12345678" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Bericht:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Schrijf hier je bericht" required></textarea>
-        </div>
-        <button type="submit">Verzenden</button>
-    </form>
-</div>
-
+<!--     
 <div class="data-container">
     <h2>Berichten uit de database</h2>
     <?php if (!empty($messages)): ?>
@@ -47,7 +24,10 @@
                         <td><?= nl2br(htmlspecialchars($message['message'])); ?></td>
                         <td><?= htmlspecialchars($message['submitted_at']); ?></td>
                         <td>
-                            <input class="delete" type='button' value="Delete" href="delete.php?" id=<?php echo $row['id']; ?>"></a>
+                        <form action="delete.php" method="POST">
+                            <input class="delete" type='submit' value="Delete">
+                            <input hidden name="id" value="<?= htmlspecialchars($message['id']); ?>">
+                        </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -57,3 +37,7 @@
         <p>Er zijn nog geen berichten om weer te geven.</p>
     <?php endif; ?>
 </div>
+ -->
+</body>
+
+</html>
