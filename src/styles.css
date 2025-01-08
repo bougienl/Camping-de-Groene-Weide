@@ -245,9 +245,10 @@ h1 {
 }
 
 .brownie {
-  
   background-color: #AA9956;
-  padding: 10px;
+  height: auto;
+  width: auto;
+  padding: 25px;
 }
 
 .adress {
