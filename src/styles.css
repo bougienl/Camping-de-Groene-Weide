@@ -1,15 +1,6 @@
-@media screen and (min-width: 480px) {
-  body {
-      width: 100vw;
-      height: 100vh;
-      margin-left: 80vw;
-      margin-right: 80vw;
 
-  }
-
-  div#main {
-      font-size: 3vw;
-  }
+body {
+  width: 100%;
 }
 
 * {
@@ -89,9 +80,9 @@ li:hover{
 
 
 .form-container {
-  max-width: 700px; /* Beperkt de breedte van de container */
+  max-width: 700px; 
   max-height: 470px;
-  margin: 80px; /* Centreer de container */
+  margin: 80px; 
   padding: 20px;
   border: 1px solid #000000;
   border-radius: 8px;
@@ -99,6 +90,7 @@ li:hover{
   background-color: transparent;
   font-family: sans-serif;
   color: #6D758F;
+  position: relative;
 }
 
 .form-container h1 {
@@ -228,7 +220,7 @@ h2 {
 
 h1 {
   font-family: "Swanky and Moo Moo", serif;
-  font-size: 50;
+  font-size: 40;
 }
 
 .header1 {
@@ -238,28 +230,32 @@ h1 {
   margin: 40px;
 }
 
-.gridcontainer {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: auto auto auto;
+.brownie {
+  width: 500px;
+  height: 375px;
+  float: right; 
+  margin-right: 300;
+  margin-top: -200;
 }
 
-.brownie {
-  background-color: #AA9956;
-  height: auto;
-  width: auto;
-  padding: 25px;
+.back {
+  z-index: -2;
+  position: absolute;
+  right: 100px;
 }
 
 .adress {
+  position: absolute;
   font-family: 'Roboto', sans-serif;
   font-size: 22;
   max-width: 642px;
-  width: 66%;
+  padding: 25px;
+  width: max-content;
   border: 1px solid black;
   line-height: 1.8;
   border-radius: 11px;
-  margin: auto;
+  margin: 100;
+  z-index: 10; 
 }
 
 .route {
@@ -271,5 +267,31 @@ h1 {
   font-size: 25;
   border-radius: 11px;
   margin-right: 80;
-  float: right;
+  /* float: right; */
+  /* position: relative; */
+  z-index: 10;
+}
+
+.cookie {
+  position: absolute;
+  width: 850;
+  height: 850;
+  flex-shrink: 0;
+  z-index: -1;
+  top: 200;
+  right: 350;
+}
+
+.maps {
+  /* position: relative; */
+  margin: 50px;
+  border: 2px solid black;
+  width: max-content;
+  z-index: 10;
+}
+
+.mapsroutebox {
+  display: flexbox;
+  flex-direction: row;
+  max-height: 300px;
 }
