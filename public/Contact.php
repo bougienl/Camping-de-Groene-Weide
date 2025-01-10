@@ -131,3 +131,23 @@ $conn->close();
         Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
     </div>
 </div>
+</body>
+
+<footer class="footer">
+    <div class="column1">
+        <h1>Contact</h1>
+        <p><object data="../assets/phone.svg" style="margin-bottom: 0.25rem;"></object>+31 592 8492829<br>
+        <object data="../assets/pin-1.svg" style="margin-bottom: -0.5rem;"></object>Balloo 26 9458TA,Balloo, Drenthe<br>
+        <object data="../assets/mail.svg" style="margin-bottom: -0.75rem;"></object>Bertdebeste@gmail.com</p>
+    </div>
+    <div class="column2">
+    <a href="#"><h1>Faciliteiten</h1></a>
+    <a href=""><h1>Accomodaties</h1></a>
+    <a href=""><h1>Reserveren</h1></a>
+    </div>
+    <div class="column3">
+    <h1>Extra informatie</h1>
+    <h1>Openingstijden</h1>
+    
+    </div>
+</footer>
