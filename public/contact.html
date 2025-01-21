@@ -1,29 +1,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank" ref="noopener noreferrer">
     <title>Camping "de Groene Weide"</title>
     <link rel="stylesheet" href="../src/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
 </head>
 
-<?php
-require '../config/db.php';
-
-$sql = "SELECT * FROM contact_form";
-$result = $conn->query($sql);
-
-$messages = [];
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $messages[] = $row;
-    }
-}
-
-$conn->close();
-?>
-
 <body>
-
+<script src="../public/konami.js"></script>
 <nav>
     <div class="navbar-rechts">
         <ul>
@@ -73,7 +58,7 @@ $conn->close();
         <div class="adress">
             <h1>Boerencamping<br>
                 "De Groene Weide"</h1>
-                <p><object data="../assets/phone.svg" style="margin-bottom: 0.25rem;"></object>+31 592 8492829<br>
+                <p><object data="../assets/phone.svg" style="margin-bottom: -0.5rem;"></object>+31 592 8492829<br>
                 <object data="../assets/pin-1.svg" style="margin-bottom: -0.5rem;"></object>Balloo 26 9458TA,Balloo, Drenthe<br>
                 <object data="../assets/mail.svg" style="margin-bottom: -0.75rem;"></object>Bertdebeste@gmail.com</p>
         </div>
@@ -131,23 +116,29 @@ $conn->close();
         Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
     </div>
 </div>
+
 </body>
 
 <footer class="footer">
     <div class="column1">
         <h1>Contact</h1>
-        <p><object data="../assets/phone.svg" style="margin-bottom: 0.25rem;"></object>+31 592 8492829<br>
+        <p><object data="../assets/phone.svg" style="margin-bottom: -0.5rem;"></object>+31 592 8492829<br>
         <object data="../assets/pin-1.svg" style="margin-bottom: -0.5rem;"></object>Balloo 26 9458TA,Balloo, Drenthe<br>
         <object data="../assets/mail.svg" style="margin-bottom: -0.75rem;"></object>Bertdebeste@gmail.com</p>
     </div>
     <div class="column2">
+    <a href=""><h1>Reserveren</h1></a>
     <a href="#"><h1>Faciliteiten</h1></a>
     <a href=""><h1>Accomodaties</h1></a>
-    <a href=""><h1>Reserveren</h1></a>
     </div>
     <div class="column3">
     <h1>Extra informatie</h1>
-    <h1>Openingstijden</h1>
-    
+    <a href="#ds"><p><object data="../assets/map.svg" style="margin-bottom: -0.25rem;"></object>Kaart</p></a>
+    <p>Openingstijden</p>
+    </div>
+    <div class="column4">
+        <div class="image-container">
+            <img class="flappie" src="../assets/Subject 1.png">
+        </div>
     </div>
 </footer>

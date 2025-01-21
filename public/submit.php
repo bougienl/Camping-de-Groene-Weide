@@ -21,7 +21,7 @@ $stmt->execute([
 ]);
 
 
-header("Refresh: 1; url=index.php");
+header("Refresh: 1; url=contact.html");
 echo "<script>alert('Bedankt voor het bericht! We zullen ons best doen het z.s.m. te beantwoorden.');</script>";
 
 exit();

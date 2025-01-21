@@ -227,7 +227,7 @@ h1 {
   max-width: 40vw;
   font-size: 34;
   text-align: center;
-  margin: 40px;
+  margin: 55px;
 }
 
 .brownie {
@@ -248,15 +248,15 @@ h1 {
   position: absolute;
   font-family: 'Roboto', sans-serif;
   font-size: 22;
+  line-height: 1.8;
   max-width: 642px;
   padding: 25px;
   width: max-content;
   border: 1px solid black;
-  line-height: 1.8;
   border-radius: 11px;
   margin: 100;
   z-index: 10; 
-  margin-right: 50;
+  right: 100;
 }
 
 .route {
@@ -295,11 +295,13 @@ h1 {
 }
 
 .mapsroutebox {
+
   display: grid;
   grid-template-columns: 1fr 1fr  ;
   gap: 100px;
   z-index: 10;
   margin: 0;
+  margin-top: 250;
 }
 
 footer{
@@ -307,8 +309,47 @@ footer{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   bottom: 0;
   margin-top: 150;
+  background-color: #8DB411;
+  max-height: 450;
+  height: 450;
+  z-index: 1;
+  gap: 20;
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 27px;
+}
+
+.column1 {
+  padding: 20;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22;
+  line-height: 1.8;
+}
+
+.column2 {
+  padding: 20;
 }
 
 .column3 {
   border-left: 1px solid black;
+  padding: 20;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22;
+  line-height: 1.8;
+}
+
+.flappie {
+margin-bottom: 0;
+}
+
+.column4 {
+  position: relative;
+  padding-right: 0;
+}
+
+.image-container {
+  position: absolute;
+  top: -223px;
+  right: 0;
+  text-align: center;
 }
