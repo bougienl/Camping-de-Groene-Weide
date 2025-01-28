@@ -1,0 +1,101 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activiteiten</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar-rechts">
+                <ul>
+                    <a href="../public/index.html">
+                        <img src="../assets/image.png" width="80">
+                    </a>
+        
+                    <a href="../public/overons.html">
+                        <li> Over ons</li>
+                    </a>        
+                
+                    <a href="../public/activiteiten.html">
+                        <li>Activiteiten</li>
+                    </a>
+
+                    <a href="../public/contact.html">
+                        <li> Contact </li>
+                    </a>
+        
+                    <div class="reserverenknop">
+                            <a href="#">
+                                <li>Reserveren</li>
+                            </a>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Grid Container -->
+        <div class="grid-container">
+            <!-- Calendar -->
+            <section class="calendar-section">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <h2 id="current-month">June 2025</h2>
+                        <div class="nav-buttons">
+                            <button id="prev-month">&lt;</button>
+                            <button id="next-month">&gt;</button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid"></div>
+                </div>
+            </section>
+
+            <!-- Text Block -->
+            <section class="lorem-section">
+                <div class="lorem-container">
+                    <h2>Activiteiten</h2>
+                    <p>
+                        "Ontdek de perfecte activiteiten voor uw verblijf. 
+            Selecteer 2 datums op de kalender en bekijk beschikbare opties. 
+            Bij Boer Bert, is er is voor ieder wat wils altijd iets te beleven. 
+            Geniet van de rust en ruimte op het platteland en ervaar het unieke karakter van een boerderij die is omgetoverd tot een camping."
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Activities Section -->
+        <section class="activities-section">
+            <div id="activities-list"></div>
+        </section>
+    </main>
+    <script src="../src/script.js"></script>
+</body>
+<footer class="footer">
+    <div class="column1">
+        <h1>Contact</h1>
+        <p><object data="../assets/phone.svg" style="margin-bottom: -0.5rem;"></object>+31 592 8492829<br>
+        <object data="../assets/pin-1.svg" style="margin-bottom: -0.5rem;"></object>Balloo 26 9458TA,Balloo, Drenthe<br>
+        <object data="../assets/mail.svg" style="margin-bottom: -0.75rem;"></object>Bertdebeste@gmail.com</p>
+    </div>
+    <div class="column2">
+    <a href="#"><h1>Reserveren</h1></a>
+    <a href="../public/overons.html"><h1>Over ons</h1></a>
+    <a href="../public/activiteiten.html"><h1>Activiteiten</h1></a>
+    </div>
+    <div class="column3">
+    <h1>Extra informatie</h1>
+    <a href="https://maps.app.goo.gl/5riPVcFG5pyStsBN8"><p><object data="../assets/map.svg" style="margin-bottom: -0.25rem;"></object>Kaart</p></a>
+    <p>Openingstijden</p>
+    </div>
+    <div class="column4">
+        <div class="image-container">
+            <img class="flappie" src="../assets/Subject 1.png">
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC Activiteiten Kalender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            max-width: 400px;
+            margin: auto;
+        }
+        .calendar div {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: #8DB411;
+            color: white;
+        }
+        .activities {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Proof of Concept: Activiteiten Kalender</h1>
+    <p>een javascript proof of concept voor een activiteitenkalender</p>
+
+    <!-- Calendar Section -->
+    <div class="calendar" id="calendar">
+        <!-- Calendar dates will be dynamically generated -->
+    </div>
+
+    <!-- Activities Section -->
+    <div class="activities" id="activities">
+        Selecteer een datum om activiteiten te bekijken.
+    </div>
+
+    <script>
+       
+        const calendar = document.getElementById('calendar');
+        const activitiesDiv = document.getElementById('activities');
+
+        // Sample activities data
+        const activities = {
+            '2025-01-15': ['Wandeling door het bos', 'Workshop fotografie'],
+            '2025-01-20': ['Yoga sessie', 'Avondconcert'],
+        };
+
+        // Generate calendar dates for January 2025
+        for (let i = 1; i <= 31; i++) {
+            const dateDiv = document.createElement('div');
+            const dateStr = `2025-01-${String(i).padStart(2, '0')}`;
+
+            dateDiv.textContent = i;
+            dateDiv.dataset.date = dateStr;
+
+            dateDiv.addEventListener('click', () => {
+                document.querySelectorAll('.calendar div').forEach(div => div.classList.remove('selected'));
+                dateDiv.classList.add('selected');
+                showActivities(dateStr);
+            });
+
+            calendar.appendChild(dateDiv);
+        }
+
+        // Show activities for a selected date
+        function showActivities(date) {
+            activitiesDiv.innerHTML = '';
+            if (activities[date]) {
+                activities[date].forEach(activity => {
+                    const activityItem = document.createElement('div');
+                    activityItem.textContent = activity;
+                    activitiesDiv.appendChild(activityItem);
+                });
+            } else {
+                activitiesDiv.textContent = 'Geen activiteiten gevonden voor deze datum.';
+            }
+        }
+    </script>
+</body>
+</html>

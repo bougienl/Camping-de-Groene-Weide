@@ -21,7 +21,9 @@ slides.forEach(setSlidePosition);
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
+    currentSlide.classList.add('is-hidden');
     targetSlide.classList.add('current-slide');
+    targetSlide.classList.remove('is-hidden');
 }
 
 const updateDots = (currentDot, targetDot) => {
@@ -76,8 +78,8 @@ dotsNav.addEventListener('click', e => {
 
     if (!targetDot) return;
 
-    const currentSlide = track.querySelector('.currentSlide');
-    const currentDot = dotsNav.querySelector('.currentSlide');
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
     const targetIndex = dots.findIndex(dot => dot === targetDot)
     const targetSlide = slides[targetIndex];
 
